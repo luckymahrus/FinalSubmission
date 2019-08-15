@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setActionBarTitle("Lucky Mahrus Portofolio");
 
         rvProjects = findViewById(R.id.rv_projects);
         rvProjects.setHasFixedSize(true);
@@ -86,5 +87,13 @@ public class MainActivity extends AppCompatActivity
                 // startActivity(aboutIntent);
                 break;
         }*/
+    }
+
+    private void setActionBarTitle(String title)
+    {
+        if (getSupportActionBar() != null)
+        {
+            getSupportActionBar().setTitle(title);
+        }
     }
 }

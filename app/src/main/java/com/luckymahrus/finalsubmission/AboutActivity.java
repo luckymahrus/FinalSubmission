@@ -16,7 +16,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
-        setActionBarTitle(getString(R.string.page_title_about));
+        setActionBarTitle("About Me");
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -26,6 +26,9 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
         TextView txtPhone = findViewById(R.id.tv_author_phone);
         txtPhone.setOnClickListener(this);
+
+        TextView txtProjectSource = findViewById(R.id.tv_project_source);
+        txtProjectSource.setOnClickListener(this);
     }
 
     @Override
@@ -52,10 +55,14 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
                 startActivity(dialPhoneIntent);
                 break;
             case R.id.tv_author_email:
-                TextView textEmailView = findViewById(v.getId());
+            TextView textEmailView = findViewById(v.getId());
                 String emailAddress = textEmailView.getText().toString();
                 Intent sendEmailIntent = new Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto",emailAddress, null));
                 startActivity(sendEmailIntent);
+                break;
+            case R.id.tv_project_source:
+                Intent openUrlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/luckymahrus/FinalSubmission"));
+                startActivity(openUrlIntent);
                 break;
         }
     }
