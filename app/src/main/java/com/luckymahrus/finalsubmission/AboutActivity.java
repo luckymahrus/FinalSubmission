@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class AboutActivity extends AppCompatActivity implements View.OnClickListener
@@ -29,6 +30,12 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
         TextView txtProjectSource = findViewById(R.id.tv_project_source);
         txtProjectSource.setOnClickListener(this);
+
+        ImageView ivFacebook = findViewById(R.id.iv_facebook_icon);
+        ivFacebook.setOnClickListener(this);
+
+        ImageView ivLinkedin = findViewById(R.id.iv_linkedin_icon);
+        ivLinkedin.setOnClickListener(this);
     }
 
     @Override
@@ -63,6 +70,14 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
             case R.id.tv_project_source:
                 Intent openUrlIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/luckymahrus/FinalSubmission"));
                 startActivity(openUrlIntent);
+                break;
+            case R.id.iv_facebook_icon:
+                Intent openFbIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://facebook.com/luckymahrus"));
+                startActivity(openFbIntent);
+                break;
+            case R.id.iv_linkedin_icon:
+                Intent openLiIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://id.linkedin.com/in/luckymahrus"));
+                startActivity(openLiIntent);
                 break;
         }
     }

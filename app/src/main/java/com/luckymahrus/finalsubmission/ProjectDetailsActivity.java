@@ -136,7 +136,7 @@ public class ProjectDetailsActivity extends AppCompatActivity {
         //for(int i=0;i<projectScreenshots)
 
         setActionBarTitle(projectName);
-        Toast.makeText(this, "Kamu memilih " + projectName, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "Kamu memilih " + projectName, Toast.LENGTH_SHORT).show();
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
