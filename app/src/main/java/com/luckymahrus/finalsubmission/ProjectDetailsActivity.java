@@ -34,9 +34,16 @@ public class ProjectDetailsActivity extends AppCompatActivity {
 
         switch (projectId)
         {
-            case "0":
-                setContentView(R.layout.details_0);
-                break;
+            case "0": setContentView(R.layout.details_0); break;
+            case "1": setContentView(R.layout.details_1); break;
+            case "2": setContentView(R.layout.details_2); break;
+            case "3": setContentView(R.layout.details_3); break;
+            case "4": setContentView(R.layout.details_4); break;
+            case "5": setContentView(R.layout.details_5); break;
+            case "6": setContentView(R.layout.details_6); break;
+            case "7": setContentView(R.layout.details_7); break;
+            case "8": setContentView(R.layout.details_8); break;
+            case "9": setContentView(R.layout.details_9); break;
         }
 
         setActionBarTitle(projectName);
