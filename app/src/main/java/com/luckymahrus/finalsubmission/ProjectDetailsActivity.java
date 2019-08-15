@@ -44,81 +44,81 @@ public class ProjectDetailsActivity extends AppCompatActivity {
             case "0":
                 setContentView(R.layout.details_0);
 
-                images.add(R.drawable.reporting0);
-                images.add(R.drawable.reporting1);
-                images.add(R.drawable.reporting2);
+                images.add(R.drawable.reporting0_resize);
+                images.add(R.drawable.reporting1_resize);
+                images.add(R.drawable.reporting2_resize);
 
                 break;
             case "1":
                 setContentView(R.layout.details_1);
 
-                images.add(R.drawable.ctouchpp0);
-                images.add(R.drawable.ctouchpp1);
-                images.add(R.drawable.ctouchpp2);
+                images.add(R.drawable.ctouchpp0_resize);
+                images.add(R.drawable.ctouchpp1_resize);
+                images.add(R.drawable.ctouchpp2_resize);
 
                 break;
             case "2":
                 setContentView(R.layout.details_2);
 
-                images.add(R.drawable.zb040);
-                images.add(R.drawable.zb041);
-                images.add(R.drawable.zb042);
+                images.add(R.drawable.zb040_resize);
+                images.add(R.drawable.zb041_resize);
+                images.add(R.drawable.zb042_resize);
 
                 break;
             case "3":
                 setContentView(R.layout.details_3);
 
-                images.add(R.drawable.zb4120);
-                images.add(R.drawable.zb4121);
-                images.add(R.drawable.zb4122);
+                images.add(R.drawable.zb4120_resize);
+                images.add(R.drawable.zb4121_resize);
+                images.add(R.drawable.zb4122_resize);
 
                 break;
             case "4":
                 setContentView(R.layout.details_4);
 
-                images.add(R.drawable.argos0);
-                images.add(R.drawable.argos1);
-                images.add(R.drawable.argos2);
+                images.add(R.drawable.argos0_resize);
+                images.add(R.drawable.argos1_resize);
+                images.add(R.drawable.argos2_resize);
 
                 break;
             case "5":
                 setContentView(R.layout.details_5);
 
-                images.add(R.drawable.phimex0);
-                images.add(R.drawable.phimex1);
-                images.add(R.drawable.phimex2);
+                images.add(R.drawable.phimex0_resize);
+                images.add(R.drawable.phimex1_resize);
+                images.add(R.drawable.phimex2_resize);
 
                 break;
             case "6":
                 setContentView(R.layout.details_6);
 
-                images.add(R.drawable.lollypop0);
-                images.add(R.drawable.lollypop1);
-                images.add(R.drawable.lollypop2);
+                images.add(R.drawable.lollypop0_resize);
+                images.add(R.drawable.lollypop1_resize);
+                images.add(R.drawable.lollypop2_resize);
 
                 break;
             case "7":
                 setContentView(R.layout.details_7);
 
-                images.add(R.drawable.lentera0);
-                images.add(R.drawable.lentera1);
-                images.add(R.drawable.lentera2);
+                images.add(R.drawable.lentera0_resize);
+                images.add(R.drawable.lentera1_resize);
+                images.add(R.drawable.lentera2_resize);
 
                 break;
             case "8":
                 setContentView(R.layout.details_8);
 
-                images.add(R.drawable.ntn0);
-                images.add(R.drawable.ntn1);
-                images.add(R.drawable.ntn2);
+                images.add(R.drawable.ntn0_resize);
+                images.add(R.drawable.ntn1_resize);
+                images.add(R.drawable.ntn2_resize);
 
                 break;
             case "9":
                 setContentView(R.layout.details_9);
 
-                images.add(R.drawable.afung0);
-                images.add(R.drawable.afung1);
-                images.add(R.drawable.afung2);
+                images.add(R.drawable.afung0_resize);
+                images.add(R.drawable.afung1_resize);
+                images.add(R.drawable.afung2_resize);
 
                 break;
         }
