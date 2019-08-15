@@ -1,11 +1,10 @@
 <resources>
     <string name="app_name">Lucky Mahrus</string>
-    <string name="txt_iv_brand_logo">Brand Logo</string>
-    <string name="txt_tv_brand_name">Brand Name</string>
     <string name="menu_about_title">About Author</string>
     <string name="author_name">Lukman Hakim Mahrus</string>
     <string name="author_email">mahrus.lukmanhakim@gmail.com</string>
     <string name="author_phone">+628111445854</string>
     <string name="page_title_about">About Author</string>
-    <string name="txt_tv_brand_id">Brand ID</string>
+    <string name="txt_tv_project_url">Project URL</string>
+    <string name="txt_tv_project_name">Project Name</string>
 </resources>

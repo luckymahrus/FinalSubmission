@@ -9,7 +9,7 @@
     android:layout_margin="5dp">
 
     <ImageView
-        android:id="@+id/iv_brand_logo"
+        android:id="@+id/iv_company_logo"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:background="@drawable/border"
@@ -22,28 +22,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
-        android:layout_toEndOf="@id/iv_brand_logo"
-        android:layout_toRightOf="@id/iv_brand_logo"
-        android:orientation="horizontal">
+        android:layout_toEndOf="@id/iv_company_logo"
+        android:layout_toRightOf="@id/iv_company_logo"
+        android:orientation="vertical">
 
         <TextView
-            android:id="@+id/tv_brand_name"
+            android:id="@+id/tv_project_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:textSize="30sp"
+            android:textSize="20sp"
             android:textStyle="bold"
-            tools:text="@string/txt_tv_brand_name" />
+            tools:text="@string/txt_tv_project_name" />
 
         <TextView
-            android:id="@+id/tv_brand_id"
-            android:layout_width="wrap_content"
+            android:id="@+id/tv_project_url"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_toEndOf="@id/tv_brand_name"
-            android:layout_toRightOf="@id/tv_brand_name"
-            android:cursorVisible="false"
-            android:visibility="invisible"
-            tools:text="@string/txt_tv_brand_id"
-            tools:visibility="invisible" />
+            android:ellipsize="end"
+            android:maxLines="2"
+            tools:text="@string/txt_tv_project_url" />
     </LinearLayout>
 </RelativeLayout>

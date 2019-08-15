@@ -6,8 +6,8 @@
     android:layout_height="match_parent">
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_brands"
+        android:id="@+id/rv_projects"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/item_brand_list" />
+        tools:listitem="@layout/item_project_list" />
 </RelativeLayout>

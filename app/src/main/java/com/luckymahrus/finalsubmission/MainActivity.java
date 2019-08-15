@@ -8,36 +8,34 @@ import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.luckymahrus.finalsubmission.adapter.ListBrandAdapter;
-import com.luckymahrus.finalsubmission.model.Brand;
-import com.luckymahrus.finalsubmission.model.BrandsData;
+import com.luckymahrus.finalsubmission.adapter.ListProjectAdapter;
+import com.luckymahrus.finalsubmission.model.Project;
+import com.luckymahrus.finalsubmission.model.ProjectsData;
 
 import java.util.ArrayList;
 
 
 public class MainActivity extends AppCompatActivity
 {
-    private RecyclerView rvBrands;
-    private ArrayList<Brand> list = new ArrayList<>();
+    private RecyclerView rvProjects;
+    private ArrayList<Project> list = new ArrayList<>();
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        rvBrands = findViewById(R.id.rv_brands);
-        rvBrands.setHasFixedSize(true);
+        rvProjects = findViewById(R.id.rv_projects);
+        rvProjects.setHasFixedSize(true);
 
-        list.addAll(BrandsData.getListData());
-        showBrandRecyclerList();
+        list.addAll(ProjectsData.getProjectListData());
+        showRecyclerList();
     }
 
-    private void showBrandRecyclerList()
-    {
-        rvBrands.setLayoutManager(new LinearLayoutManager(this));
-        ListBrandAdapter listHeroAdapter = new ListBrandAdapter(list);
-        rvBrands.setAdapter(listHeroAdapter);
+    private void showRecyclerList(){
+        rvProjects.setLayoutManager(new LinearLayoutManager(this));
+        ListProjectAdapter listProjectAdapter = new ListProjectAdapter(list);
+        rvProjects.setAdapter(listProjectAdapter);
     }
 
     @Override
