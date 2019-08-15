@@ -22,6 +22,12 @@ public class ListProjectAdapter extends RecyclerView.Adapter<ListProjectAdapter.
         this.listProject = list;
     }
 
+    private OnItemClickCallback onItemClickCallback;
+    public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback)
+    {
+        this.onItemClickCallback = onItemClickCallback;
+    }
+
 
     @NonNull
     @Override
@@ -39,6 +45,12 @@ public class ListProjectAdapter extends RecyclerView.Adapter<ListProjectAdapter.
                 .into(holder.ivCompanyLogo);
         holder.tvProjectName.setText(Project.getProjectName());
         holder.tvProjectUrl.setText(Project.getProjectUrl());
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onItemClickCallback.onItemClicked(listProject.get(holder.getAdapterPosition()));
+            }
+        });
     }
 
     @Override
@@ -55,5 +67,10 @@ public class ListProjectAdapter extends RecyclerView.Adapter<ListProjectAdapter.
             tvProjectName = itemView.findViewById(R.id.tv_project_name);
             tvProjectUrl = itemView.findViewById(R.id.tv_project_url);
         }
+    }
+
+    public interface OnItemClickCallback
+    {
+        void onItemClicked(Project data);
     }
 }

@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.luckymahrus.finalsubmission.adapter.ListProjectAdapter;
 import com.luckymahrus.finalsubmission.model.Project;
@@ -36,6 +37,13 @@ public class MainActivity extends AppCompatActivity
         rvProjects.setLayoutManager(new LinearLayoutManager(this));
         ListProjectAdapter listProjectAdapter = new ListProjectAdapter(list);
         rvProjects.setAdapter(listProjectAdapter);
+
+        listProjectAdapter.setOnItemClickCallback(new ListProjectAdapter.OnItemClickCallback() {
+            @Override
+            public void onItemClicked(Project data) {
+                showSelectedProject(data);
+            }
+        });
     }
 
     @Override
@@ -61,5 +69,22 @@ public class MainActivity extends AppCompatActivity
                 startActivity(aboutIntent);
                 break;
         }
+    }
+
+    private void showSelectedProject(Project project)
+    {
+        Intent projectDetailsIntent = new Intent(MainActivity.this, ProjectDetailsActivity.class);
+        projectDetailsIntent.putExtra("EXTRA_PROJECTID", project.getProjectId());
+        projectDetailsIntent.putExtra("EXTRA_PROJECTNAME", project.getProjectName());
+        startActivity(projectDetailsIntent);
+
+        /*switch (project.getProjectId())
+        {
+            case "0":
+                Toast.makeText(this, "Kamu memilih " + project.getProjectName(), Toast.LENGTH_SHORT).show();
+                // Intent aboutIntent = new Intent(MainActivity.this, AboutActivity.class);
+                // startActivity(aboutIntent);
+                break;
+        }*/
     }
 }

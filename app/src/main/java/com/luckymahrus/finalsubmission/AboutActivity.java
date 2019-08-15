@@ -12,7 +12,8 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
         setActionBarTitle(getString(R.string.page_title_about));
